@@ -11,10 +11,10 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     a.setApplicationName(APPLICATION_NAME);
-    a.setApplicationDisplayName(a.applicationName());
+    //a.setApplicationDisplayName(a.applicationName());
     a.setApplicationVersion(APPLICATION_VERSION);
     MainWindow w;
-    w.setWindowTitle("Main window");
+    w.setWindowTitle("Main window - Medge");
     w.show();
 
     return a.exec();

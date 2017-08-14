@@ -38,7 +38,7 @@ MainWindow::MainWindow(QWidget *parent) :
         cerr << tr("DICOM dictionary not loaded. Unexpected behaviour should happen").toStdString() << endl;
 
     sceneWelcomeText_p = new QGraphicsScene();
-    welcomeTextItem_p = sceneWelcomeText_p->addSimpleText("Load an image first");
+    welcomeTextItem_p = sceneWelcomeText_p->addSimpleText("First load an image");
     welcomeTextItem_p->setBrush(QBrush(Qt::white));
     ui->imageView->setScene(sceneWelcomeText_p);
     ui->statusBar->showMessage("Please open a file");
@@ -311,7 +311,7 @@ bool MainWindow::loadImages(metaInfoGlobal_s& metaInfoGlobalTmp, list<slice_s>& 
             if (pixelLength == 8)
             {
                 //status = it->dcmFileFormat.getDataset()->findAndGetUint8Array(DCM_PixelData, (const Uint8*&)imageData);
-                cerr << tr("8 Bits Allocated attribute not supported yet").toStdString() << endl;
+                cerr << tr("8 Bits Allocated attribute not yet supported").toStdString() << endl;
                 ui->statusBar->showMessage(tr("8 Bits Allocated attribute not yet supported"));
                 return false;
             }
